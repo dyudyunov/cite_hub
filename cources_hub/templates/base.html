@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% block title %}
+            CourcesHub
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <div class="container mr-5">
+            
+            {% block infoupdate %}
+            {% endblock %}
+
+            {% block mainheader %}
+            {% endblock %}
+
+            {% block navbar %}
+            {% endblock %}
+            
+            {% block content %}
+            {% endblock %}
+            
+            <div class="container text-muted">
+                <p>
+                    <small>Мы берем всю опубликованную информацию из открытых источников. Если вашего события еще нет - напишите на ak@kontoram.com</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

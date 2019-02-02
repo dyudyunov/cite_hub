@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block infoupdate%}
+    <p class="badge badge-success mb-5">
+        <small>Информация обновляестя ежедневно в 9 утра</small>
+    </p>
+{% endblock %}
+
+{% block mainheader %}
+    <h1 class="mb-5">
+        Все "обучалки" Украины в одном месте:<br><strong>выбирай, учись, зарабатывай</strong>
+    </h1>
+{% endblock %}
+
+{% block navbar %}
+    <ul class="nav mb-5">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'online_url' %}">Online</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'kyiv_url' %}">Киев</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'dnipro_url' %}">Днепр</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'lviv_url' %}">Львов</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'kharkiv_url' %}">Харьков</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'odessa_url' %}">Одесса</a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %} 
+    {% for post in posts %}
+        <div class="container mb-5">
+            <div>
+                <a class="text-body" href="{% url 'eventdetail_url' slug=post.slug %}">
+                <h5>{{ post.title }}</h5>
+                <p class="mb-0">{{ post.city }}</p>
+                <p>{{ post.time }}</p>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
