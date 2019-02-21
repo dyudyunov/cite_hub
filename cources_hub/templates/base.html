@@ -9,28 +9,68 @@
             CourcesHub
         {% endblock %}
     </title>
+    <style>
+        
+        a.green-link {
+            color: #000000; /* Цвет обычной ссылки */ 
+            text-decoration: none; /* Убираем подчеркивание у ссылок */
+            font-size: 11pt;
+        }
+
+        a.green-link:hover {
+            color: #44ba4c; /* Цвет ссылки при наведении на нее курсора мыши */  
+            text-decoration: none; 
+        }
+  
+        .inline-icon {
+            vertical-align: bottom;
+        }
+    </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div>
-        <div class="container mr-5">
-            
-            {% block infoupdate %}
-            {% endblock %}
+        <div class="container">
 
-            {% block mainheader %}
+            <div class="mt-2">
+            {% block back_to_main %}
             {% endblock %}
+            </div>
+        
+            <div class='row justify-content-md-center'>
 
-            {% block navbar %}
-            {% endblock %}
+                <div class="col-sm col-xl-9">
+
+                    {% block infoupdate %}
+                    {% endblock %}                
+                
+                </div>
             
-            {% block content %}
-            {% endblock %}
-            
-            <div class="container text-muted">
+            </div>
+
+            <div class='row justify-content-md-center'>
+
+                <div class="col-sm col-xl-9">
+
+                    {% block mainheader %}
+                    {% endblock %}
+
+                    {% block navbar %}
+                    {% endblock %}
+                    
+                    {% block content %}
+                    {% endblock %}
+                
+                </div>
+
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-sm col-xl-9">
                 <p>
                     <small>Мы берем всю опубликованную информацию из открытых источников. Если вашего события еще нет - напишите на ak@kontoram.com</small>
                 </p>
+                </div>
             </div>
         </div>
     </div>

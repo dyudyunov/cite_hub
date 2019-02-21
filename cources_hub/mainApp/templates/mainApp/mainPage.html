@@ -15,22 +15,22 @@
 {% block navbar %}
     <ul class="nav mb-5">
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'online_url' %}">Online</a>
+            <a class="nav-link green-link" href="{% url 'online_url' %}">Online</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'kyiv_url' %}">Киев</a>
+            <a class="nav-link green-link" href="{% url 'kyiv_url' %}">Киев</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'dnipro_url' %}">Днепр</a>
+            <a class="nav-link green-link" href="{% url 'dnipro_url' %}">Днепр</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'lviv_url' %}">Львов</a>
+            <a class="nav-link green-link" href="{% url 'lviv_url' %}">Львов</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'kharkiv_url' %}">Харьков</a>
+            <a class="nav-link green-link" href="{% url 'kharkiv_url' %}">Харьков</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'odessa_url' %}">Одесса</a>
+            <a class="nav-link green-link" href="{% url 'odessa_url' %}">Одесса</a>
         </li>
     </ul>
 {% endblock %}
@@ -39,10 +39,9 @@
     {% for post in posts %}
         <div class="container mb-5">
             <div>
-                <a class="text-body" href="{% url 'eventdetail_url' slug=post.slug %}">
-                <h5>{{ post.title }}</h5>
-                <p class="mb-0">{{ post.city }}</p>
-                <p>{{ post.time }}</p>
+                <a class="green-link" href="{% url 'eventdetail_url' slug=post.slug %}">
+                <h5 class="event-title">{{ post.title }}</h5>
+                <p class="mb-0">{{ post.city }} {{ post.time }}</p>
                 </a>
             </div>
         </div>

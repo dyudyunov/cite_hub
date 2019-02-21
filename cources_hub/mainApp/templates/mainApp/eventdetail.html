@@ -4,6 +4,10 @@
     {{ post.title }} - {{ block.super }}
 {% endblock %}
 
+{% block back_to_main %}
+    <a class="green-link" href='/'><span><i class="material-icons inline-icon">keyboard_backspace</i></span><span>Вернуться к списку</span></a>
+{% endblock %}
+
 {% block content %}
     <h1 class="mt-5 mb-5">
         {{ post.title }}
