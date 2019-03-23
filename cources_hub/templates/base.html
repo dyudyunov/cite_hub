@@ -37,38 +37,39 @@
 <body>
     <div>
         <div class="container">
-
             <div class="mt-2">
-            {% block back_to_main %}
-            {% endblock %}
+                {% block back_to_main %}
+                {% endblock %}
             </div>
-        
             <div class='row justify-content-md-center'>
-
                 <div class="col-sm col-xl-9">
-
                     {% block infoupdate %}
                     {% endblock %}                
-                
                 </div>
-            
             </div>
-
             <div class='row justify-content-md-center'>
-
                 <div class="col-sm col-xl-9">
-
                     {% block mainheader %}
                     {% endblock %}
-
+                </div>
+            </div>
+            <form>
+                <div class="row justify-content-md-center">
+                    <div class="col-sm col-xl-6">
+                        <input type="text" class="form-control" placeholder="Что ищешь, путник?">
+                    </div>
+                    <div class="col-sm col-xl-3 mb-4">
+                        <button type="submit" class="btn btn-success ml-1">Поиск</button>
+                    </div>
+                </div>
+            </form>
+            <div class='row justify-content-md-center'>
+                <div class="col-sm col-xl-9">
                     {% block navbar %}
                     {% endblock %}
-                    
                     {% block content %}
                     {% endblock %}
-                
                 </div>
-
             </div>
             <div class="row justify-content-md-center">
                 <div class="col-sm col-xl-9">
